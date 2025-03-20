@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        body {
+            text-align: center;
+            height: 100%;
+            width: 100%;
+        }
+        .slider-container {
+            position: relative;
+            width: 350px;
+            height: 500px;
+            margin: auto;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 5%;
+            display: block;
+        }
+        .btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev { left: 0; }
+        .next { right: 0; }
+    </style>
+</head>
+<body>
+    <div class="slider-container">
+        <button class="btn prev" onclick="prevImage()">&#10094;</button>
+        <img id="slider" src="" alt="Image Slider">
+        <button class="btn next" onclick="nextImage()">&#10095;</button>
+    </div>
+    <script>
+        const images = [
+            "C:\\Users\\prasa\\Downloads\\2025.jpeg",
+            "C:\\Users\\prasa\\Downloads\\Paasphoto.jpeg",
+            "C:\\Users\\prasa\\OneDrive\\Documents\\Desktop\\PrasanthGal\\Instagram\\IMG_20240630_010749_377.jpg",
+            "C:\\Users\\prasa\\Downloads\\cover_image.png",
+            "C:\\Users\\prasa\\OneDrive\\Documents\\Desktop\\PrasanthGal\\new style\\1712040405012.jpg",
+            "C:\\Users\\prasa\\OneDrive\\Documents\\Desktop\\PrasanthGal\\new style\\IMG20240614123110.jpg",
+            "C:\\Users\\prasa\\OneDrive\\Documents\\Desktop\\PrasanthGal\\Instagram\\IMG_20240811_002916_110.jpg"
+        ];
+        let currentIndex = 0;       
+        function showImage(index) {
+            document.getElementById('slider').src = images[index];
+        }       
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length;
+            showImage(currentIndex);
+        }      
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length;
+            showImage(currentIndex);
+        }
+        showImage(currentIndex);
+    </script>
+</body>
+</html>
