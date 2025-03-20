@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <title>Stylish Profile Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #86659d, #695f98);
+            
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            padding: 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            width: 400px;
+            transition: transform 0.4s, box-shadow 0.4s;
+            position: relative;
+            color: white;
+        }
+
+        .profile-card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #007BFF;
+            margin-top: -60px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .name {
+            margin-top: 10px;
+            font-size: 22px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .designation {
+            color: #caae23;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .bio {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color:#000000;
+            padding: 0 10px;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-icons a img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .social-icons a img:hover {
+            transform: scale(1.2);
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="profile-card">
+        <img src="C:\Users\prasa\Downloads\2025.jpeg" alt="Profile Picture" class="profile-img">
+        <div class="name">Chepala Prasanth Kumar</div>
+        <div class="designation">Associate Software Engineer</div>
+        <div class="bio">Passionate Software Developer with expertise in Java, Python, SQL, and Machine Learning. Skilled in building intelligent systems, web applications, and AI-driven solutions. Constantly innovating and eager to solve complex problems with scalable solutions.</div>
+        
+        <div class="social-icons">
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="C:\Users\prasa\Downloads\insta.jpeg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="C:\Users\prasa\Downloads\linkedin.png" alt="LinkedIn">
+            </a>
+        </div>
+    </div>
+</body>
+</html>
